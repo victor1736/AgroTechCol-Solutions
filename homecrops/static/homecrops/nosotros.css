@@ -1,0 +1,618 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Open+Sans:wght@700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+body{
+  background:  rgb(238, 239, 239);
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+
+header {
+  background-color: rgb(17, 174, 61);
+  height: 100px;
+  width: 100%;
+}
+
+
+
+.logo {
+  height: 105px;
+  width: 305px;
+}
+
+.logo:hover {
+  background-color: green;
+}
+
+@media (max-width: 768px) {
+  .logo {
+    height: 70px;
+    width: 200px;
+  }
+}
+
+.menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+}
+
+.menu .navbar ul li {
+  position: relative;
+  float: left;
+}
+
+.menu .navbar ul li a {
+  font-size: 20px;
+  padding: 20px;
+  color: white;
+  display: block;
+}
+
+.menu .navbar ul li a:hover {
+  color: rgb(7, 92, 48);
+}
+
+#menu {
+  display: none;
+}
+
+.menu-icono {
+  width: 25px;
+}
+
+.menu label {
+  cursor: pointer;
+  display: none;
+}
+
+@media (max-width: 991px) {
+  .menu {
+    padding: 30px;
+  }
+
+  .menu label {
+    display: initial;
+  }
+
+  .back {
+    padding: 40px 0;
+  }
+
+  .menu .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: black;
+    display: none;
+  }
+
+  .menu .navbar ul li {
+    width: 100%;
+  }
+
+  #menu:checked ~ .navbar {
+    display: initial;
+  }
+}
+
+
+
+/* busqueda */
+
+.search-bar {
+  display: inline-table;
+  position: relative;
+  left: 3%;
+  transform: translate(-50% -50%);
+  padding: 22px;
+  margin: 20px 20px 20px 20;
+}
+
+.search-input {
+  outline: none;
+  box-sizing: border-box;
+  height: 22px;
+  width: 0;
+  padding: -5px 10px;
+  color: #020202;
+  border-radius: 50px;
+  font-size: 20px;
+  border: 2px solid rgb(4, 0, 0);
+  transition: all 0.7s ease;
+}
+
+::placeholder {
+  color: grey;
+}
+
+.btn {
+  position: absolute;
+  right: 15px;
+  top: 26%;
+  height: 30px;
+  width: 30px;
+  background: rgb(17, 174, 61);
+  line-height: 35px;
+  border-radius: 50%;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.btn i {
+  font-size: 17px;
+  color: white;
+  line-height: 32px;
+  transition: all 0.7s ease;
+}
+
+.search-bar:hover input {
+  width: 200px;
+}
+
+.search-bar:hover i {
+  transition: rotate(-360d);
+}
+
+.btn:before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.5);
+  /* Sombra circular */
+  transition: box-shadow 0.3s;
+}
+
+.btn:hover {
+  color: #01481a;
+}
+
+.btn:hover:before {
+  box-shadow: 0px 0px 10px 2px rgba(255, 255, 255, 0.7);
+  /* Sombra circular al pasar el cursor */
+}
+
+.btn:hover i {
+  color: #1035a5;
+  /* Cambio de color del icono al pasar el cursor */
+}
+
+.btn:active {
+  box-shadow: 0px 0px 10px 10px rgba(255, 255, 255, 0.7);
+  /* Sombra circular al presionar */
+}
+
+
+
+/* User */
+.login-dropdown {
+  position: relative;
+  float: right;
+  width: 0.1%;
+  height: 35px;
+  margin-right: 1px;
+  margin-left: 1px;
+}
+
+.login-dropdown-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: none;
+  background: none;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.login-dropdown-toggle i {
+  font-size: 18px;
+  color: #ffffff;
+  transition: color 0.3s;
+  /* Nueva transición de color */
+}
+
+.login-dropdown-toggle:before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.5);
+  /* Sombra circular */
+  transition: box-shadow 0.3s;
+}
+
+.login-dropdown-toggle:hover {
+  background-color: #06782e;
+  /* Cambio de color al pasar el cursor */
+}
+
+.login-dropdown-toggle:hover:before {
+  box-shadow: 0px 0px 10px 2px rgba(255, 255, 255, 0.7);
+  /* Sombra circular al pasar el cursor */
+}
+
+.login-dropdown-toggle:hover i {
+  color: #1035a5;
+  /* Cambio de color del icono al pasar el cursor */
+}
+
+.login-dropdown-toggle:active {
+  box-shadow: 0px 0px 10px 10px rgba(255, 255, 255, 0.7);
+  /* Sombra circular al presionar */
+}
+
+/* Sales */
+.sales {
+  display: inline-table;
+  position: relative;
+  float: right;
+  width: 3%;
+  height: 35px;
+  margin-left: 1px;
+  margin-right: 1px;
+}
+
+.sales_icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: none;
+  background: none;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.sales_icon i {
+  font-size: 18px;
+  color: #ffffff;
+  transition: color 0.3s;
+  /* Nueva transición de color */
+}
+
+.sales_icon:before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.5);
+  /* Sombra circular */
+  transition: box-shadow 0.3s;
+}
+
+.sales_icon:hover {
+  background-color: #06782e;
+  /* Cambio de color al pasar el cursor */
+}
+
+.sales_icon:hover:before {
+  box-shadow: 0px 0px 10px 2px rgba(255, 255, 255, 0.7);
+  /* Sombra circular al pasar el cursor */
+}
+
+.sales_icon:hover i {
+  color: #1035a5;
+  /* Cambio de color del icono al pasar el cursor */
+}
+
+.sales_icon:active {
+  box-shadow: 0px 0px 10px 10px rgba(255, 255, 255, 0.7);
+  /* Sombra circular al presionar */
+}
+
+
+
+/*Main*/
+
+main {
+  padding: 50px;
+  margin: 50px 200px ;
+}
+
+* {
+  margin: 1%;
+  box-sizing: border-box;
+}
+
+article {
+  margin-bottom: 20px;
+}
+
+h1 {
+  display: flex;
+  width: 100%;
+  height: 80px;
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  align-items: center ;
+  justify-content: center ;
+  background-color: #020202;
+  color: #efefef;
+}
+
+.titulo2{
+  width: 100%;
+  height: 80px;
+  background-color: black;
+  border-bottom: 10px solid  rgb(17, 174, 61);
+}
+
+h2 {
+  display: flex;
+  width: 100%;
+  height: 80%;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #efefef;
+  align-items: center ;
+  justify-content: center ;
+}
+
+
+
+figure {
+  display: flex;
+  justify-content: center;
+}
+
+.image-container {
+  position: relative;
+  text-align: center;
+}
+
+.image-container img {
+  max-width: 100%;
+  max-height: 500px; 
+  margin-bottom: 30px; 
+}
+
+.image-container figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-bottom: 10px; 
+  font-size: 18px;
+  text-align: center;
+}
+
+
+p {
+  font-size: 19px;
+  line-height: 1.5;
+  text-align: justify;
+  margin-bottom: 20px; /
+}
+
+section {
+  display: inline-flex;
+  width: 100%;
+  height: 600%;
+}
+
+section img {
+  width: 20px;
+  flex-grow: 5;
+  object-fit: cover;
+  opacity: .8;
+  transition: .3s ease;
+  margin-bottom: 30px; /* Agrega margen inferior a las imágenes */
+}
+
+section img:hover {
+  cursor: crosshair;
+  width: 30%;
+  opacity: 1;
+  filter: contrast(120%);
+}
+
+/* Estilos para teléfonos móviles */
+@media screen and (max-width: 480px) {
+
+  main {
+    padding: 20px;
+    margin: 20px;
+  }
+
+  h1 {
+    font-size: 12px;
+  }
+  h2 {
+    font-size: 10px;
+  }
+
+  p {
+    font-size: 10px;
+  }
+
+}
+
+
+/*footer*/
+
+.pie-pagina {
+  width: 100%;
+  background-color: rgb(17, 174, 61);
+}
+
+.pie-pagina .grupo-1 {
+  width: 100%;
+  max-width: 1400px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  padding: 20px 0px;
+}
+
+.pie-pagina .grupo-1 .box figure{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.pie-pagina .grupo-1 .box figure img{
+  width: 250px;
+}
+
+.pie-pagina .grupo-1 .box h3 {
+  color: #ffffff;
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+.pie-pagina .grupo-1 .box p{
+  color: #efefef;
+  margin-bottom: 10px;
+}
+
+
+
+.pie-pagina .grupo-1 .box .siguenos{
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+
+}
+
+:root{
+  --facebook:  #3b5999;
+  --instagram:  #e4405f;
+  --twitter:  #55acee;
+  --pinterest:  #bd081c;
+  --linkedin:  #0077B5;
+  
+}
+.pie-pagina .grupo-1 .box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.pie-pagina .grupo-1 .box .siguenos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.pie-pagina .grupo-1 .box .redes-container{
+    display: flex;
+    justify-content: flex-end;
+    background-color: rgb(17, 174, 61);
+}
+
+.pie-pagina .grupo-1 .box .redes-container ul {
+  display: flex;
+  justify-content: center; /* Añade esta línea para centrar los iconos */
+}
+  
+.pie-pagina .grupo-1 .box .redes-container  ul li{
+  display: inline-block;
+  margin: 0 5px;
+  text-align: center;
+  
+}
+  
+.pie-pagina .grupo-1 .box  .redes-container ul li a{
+  display: block;
+  padding: 10px 20px;
+  background: #333;
+  color: #fff;
+  line-height: 35px;
+  font-size: 14px;
+  box-shadow: 0 3px 5px 0px rgba(0, 0, 0, .2);
+  transition: .2s;
+  border-radius: 10%;
+}
+  
+.pie-pagina .grupo-1 .box  .redes-container ul:hover a{
+  filter:  blur(2px);
+}
+  
+.pie-pagina .grupo-1 .box  .redes-container ul li a:hover{
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 5px 5px 0px rgba(0, 0, 0, .4);
+  filter: none;
+}
+  
+.pie-pagina .grupo-1 .box  .redes-container ul li .facebook:hover{
+  background: var(--facebook);
+}
+.pie-pagina .grupo-1 .box  .redes-container ul li .instagram:hover{
+  background: var(--instagram);
+}
+.pie-pagina .grupo-1 .box  .redes-container ul li .twitter:hover{
+  background: var(--twitter);
+}
+.pie-pagina .grupo-1 .box  .redes-container ul li .pinterest:hover{
+  background: var(--pinterest);
+}
+.pie-pagina .grupo-1 .box  .redes-container ul li .linkedin:hover{
+  background: var(--linkedin);
+}
+
+.pie-pagina .grupo-2 {
+  padding: 15px 10px;
+  text-align: center;
+  color: #000000;
+}
+
+.pie-pagina .grupo-2 small{
+  font-size: 15px;
+}
+
+@media screen and (max-width:800px) {
+
+  .pie-pagina .grupo-1 {
+    width: 90%;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 30px;
+    padding: 35px 0px;
+    
+  }
+
+  .pie-pagina{
+    background-color: #bd081c !important;
+  }
+
+}

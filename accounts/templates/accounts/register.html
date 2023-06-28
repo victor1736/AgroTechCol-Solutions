@@ -1,0 +1,138 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro</title>
+    <link rel="stylesheet" href="{% static 'accounts/reset.css' %}">
+    <link rel="stylesheet" href="{% static 'accounts/styles.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymus">
+    <link rel="stylesheet" href="https://www.gstatic.com/_/translate_http/_/ss/k=translate_http.tr.69JJaQ5G5xA.L.W.O/d=0/rs=AN8SPfpC36MIoWPngdVwZ4RUzeJYZaC7rg/m=el_main_css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+  <header>
+        <div class="menu container">
+            <a href="http://127.0.0.1:8000/homecrops/" > <img src="../../../../static/homecrops/images/CROPSlogoBLANCO.png" class="logo" alt="Logo"> </a>
+            <input type="checkbox" id="menu" />
+            <label for="menu">
+                <img src="../../../../static/homecrops/images/menu.png" class="menu-icono" >
+            </label>   
+            <nav class="navbar">
+                <ul>
+                    <li> <a href="http://127.0.0.1:8000/homecrops/nosotros">NOSOTROS </a></li>
+                    <li> <a href="http://127.0.0.1:8000/homecrops/portafolio">PORTAFOLIO </a></li>
+                    <li> <a href="http://127.0.0.1:8000/homecrops/contacto">CONTACTO </a></li>
+                    <li> <a href="http://127.0.0.1:8000/homecrops/ceo">CEO </a></li>
+                </ul>
+            </nav>    
+                <div class="search-bar"><input type="text" class="search-input" placeholder="Buscar"><div class="btn"><i class="fa fa-search"></i></div>
+                </div>
+           
+                <div class="login-dropdown">
+                <a href="http://127.0.0.1:8000/accounts/login/" class="login-dropdown-toggle"><i class="far fa-user"></i></a>
+                </div>
+
+                <div class="sales">
+                    <a href="#" class="sales_icon"> <i class="fas fa-shopping-cart"></i></a>
+                </div>
+        </div>
+  </header>
+  <main>
+    <label for="email">
+        <span>Correo Electrónico:</span>
+        <input type="email" id="email" autocomplete="email" required>
+      </label>
+      <label for="password">
+        <span>Contraseña:</span>
+        <input type="password" id="password" maxlength="25" minlength="8" autocomplete="new-password" required>
+      </label>
+      <label for="confir_password">
+        <span>Confirmar Contraseña:</span>
+        <input type="password" id="confir_password" maxlength="25" minlength="8" autocomplete="new-password" required>
+      </label>
+    <form action="">
+      <label for="nombre">
+        <span>Nombre:</span>
+        <input type="text" id="nombre" placeholder="Pepito" autocomplete="name" required>
+      </label>
+      <label for="apellidos">
+        <span>Apellidos:</span>
+        <input type="text" id="apellidos" placeholder="Perez" autocomplete="family-name" required>
+      </label>
+      <label for="fecha_nacimiento">
+        <span>Fecha de nacimiento:</span>
+        <input type="date" id="fecha_nacimiento" autocomplete="bday" required>
+      </label>
+      <label for="genero">
+        <span>Género:</span>
+        <select id="genero">
+          <option value="">Seleccionar</option>
+          <option value="Masculino">Masculino</option>
+          <option value="Femenino">Femenino</option>
+          <option value="No binario">No binario</option>
+          <option value="Prefiero no decirlo">Prefiero no decirlo</option>
+        </select>
+      </label>
+      <label for="pais_residencia">
+        <span>Pais de residencia:</span>
+        <input type="text" id="pais_residencia" autocomplete="country" required>
+      </label>
+      <label for="zona">
+        <span>zona:</span>
+        <input type="text" id="zona"  required>
+      </label>
+      <label for="ciudad">
+        <span>Ciudad:</span>
+        <input type="text" id="ciudad" required>
+      </label>
+      <label for="direccion">
+        <span>Dirección:</span>
+        <input type="text" id="direccion" required>
+      </label>
+      <label for="tipo_usuario">
+        <span>Tipo de usuario:</span>
+        <select id="tipo_usuario" required>
+          <option value="">Seleccionar</option>
+          <option value="productor">Productor</option>
+          <option value="comprador">Comprador</option>
+        </select>
+      </label>
+
+      <label for="telefono_fijo">
+        <span>Telefono fijo:</span>
+        <input type="tel" id="telefono_fijo"  pattern="[0-9]{7,10}"  autocomplete="tel">
+      </label>
+      <label for="telefono_celular">
+        <span>Teléfono celular:</span>
+        <input type="tel" id="telefono_celular" pattern="[0-9]{10}" autocomplete="tel" required>
+      </label>
+
+      <input type="submit"  />
+      
+
+
+
+    </form>
+     
+  </main>
+  <footer>
+    <div class="redes-container">
+        <ul>
+            <li><a href="https://www.facebook.com" class="facebook"><i class="fab fa-facebook-f"></i></a></li>
+            <li><a href="https://www.instagram.com" class="instagram"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="https://twitter.com" class="twitter"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="https://www.pinterest.com" class="pinterest"><i class="fab fa-pinterest-p"></i></a></li>
+            <li><a href="https://www.linkedin.com" class="linkedin"><i class="fab fa-linkedin-in"></i></a></li>
+        </ul>
+    </div>
+  </footer>
+
+</body>
+</html>
+
+
+

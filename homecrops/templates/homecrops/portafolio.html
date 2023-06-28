@@ -1,0 +1,108 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Nuestra empresa se dedica a mejorar la producción agrícola mediante el uso de tecnología innovadora. Ofrecemos soluciones y herramientas que ayudan a los agricultores a optimizar sus cultivos, aumentar rendimientos y mejorar la eficiencia. Además, brindamos servicios de comercialización para facilitar la venta de los productos agrícolas obtenidos. Con nuestra plataforma, los agricultores pueden acceder a información y asesoramiento especializado, monitorear y controlar sus cultivos, implementar prácticas sostenibles y establecer conexiones con potenciales compradores. ¡Descubre cómo podemos ayudarte a potenciar tus cultivos y maximizar tus oportunidades de venta!">
+    <meta name="robots" content="index,follow">
+    <meta name="viewport" content="width=device-width, inicial-scale=1">
+    <title>PORTAFOLIO</title>
+   
+    <link rel="stylesheet" href="{% static 'homecrops/reset.css' %}">
+    <link rel="stylesheet" href="{% static 'homecrops/portafolio.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymus">
+    <link rel="stylesheet" href="https://www.gstatic.com/_/translate_http/_/ss/k=translate_http.tr.69JJaQ5G5xA.L.W.O/d=0/rs=AN8SPfpC36MIoWPngdVwZ4RUzeJYZaC7rg/m=el_main_css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Open+Sans:wght@700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/fba9d3515b.js" crossorigin="anonymous"></script>
+</head>
+<body>
+        <header>
+        <div class="back">
+            <div class="menu container">
+                <a href="http://127.0.0.1:8000/homecrops/" > <img src="../../../../static/homecrops/images/CROPSlogoBLANCO.png" class="logo" alt="Logo"> </a>
+                <input type="checkbox" id="menu" />
+                <label for="menu">
+                    <img src="../../../../static/homecrops/images/menu.png" class="menu-icono" >
+                </label>   
+                <nav class="navbar">
+                    <ul>
+                        <li> <a href="http://127.0.0.1:8000/homecrops/nosotros">NOSOTROS </a></li>
+                        <li> <a href="http://127.0.0.1:8000/homecrops/portafolio">PORTAFOLIO </a></li>
+                        <li> <a href="http://127.0.0.1:8000/homecrops/contacto">CONTACTO </a></li>
+                        <li> <a href="http://127.0.0.1:8000/homecrops/ceo">CEO </a></li>
+                    </ul>
+                </nav>    
+
+                    <div class="search-bar">
+                        <input type="text" class="search-input" placeholder="Buscar">
+                        <div class="btn"><i class="fa fa-search"></i></div>
+                    </div>
+               
+                    <div class="login-dropdown">
+                    <a href="http://127.0.0.1:8000/accounts/login/" class="login-dropdown-toggle">
+                        <i class="far fa-user"></i>
+                    </a>
+                    </div>
+
+                    <div class="sales">
+                        <a href="#" class="sales_icon"> <i class="fas fa-shopping-cart"></i></a>
+                    </div>
+            </div>
+        </div>
+    </header>
+  
+
+    <main>
+        <article class="portafolio">
+            <h1>PORTAFOLIO</h1>
+            <p>En nuestro apartado de "Portafolio", queremos presentarte una selección de los productos y servicios que ofrecemos en CROPS. Nuestro compromiso es brindar soluciones innovadoras y tecnológicas para potenciar la agricultura de precisión y ayudar a los pequeños productores a alcanzar su máximo potencial. Descubre a continuación algunos de los destacados de nuestro portafolio:</p>
+            <ol class="items-portafolio">
+                <li>Maquinaria de Sensado Avanzado: Contamos con equipos de última generación que permiten recopilar datos precisos sobre el estado de los cultivos, como la humedad del suelo, los niveles de nutrientes y la temperatura ambiental. Esta información ayuda a los agricultores a tomar decisiones basadas en datos y optimizar el rendimiento de sus cultivos.</li>
+                <li>Sistemas de Automatización: Nuestras soluciones de automatización permiten controlar de manera eficiente y precisa diversos aspectos del proceso de cultivo, como el riego, la aplicación de fertilizantes y el control de plagas. Esto ayuda a minimizar el esfuerzo manual y maximizar la eficiencia, ahorrando tiempo y recursos a los agricultores.</li>
+                <li>Análisis de Datos y Asesoramiento: En CROPS, comprendemos la importancia de interpretar los datos recopilados y brindar asesoramiento experto a nuestros clientes. Nuestro equipo de especialistas en agricultura de precisión trabaja en estrecha colaboración con los agricultores para analizar los datos recopilados, identificar oportunidades de mejora y ofrecer recomendaciones personalizadas.</li>
+                <li>Capacitación y Formación: Además de proporcionar tecnología de vanguardia, nos enfocamos en capacitar a los agricultores en el uso adecuado de nuestras soluciones. Ofrecemos programas de capacitación y talleres prácticos para garantizar que los agricultores aprovechen al máximo nuestra tecnología y adquieran las habilidades necesarias para optimizar sus operaciones.</li>
+                <li>Servicio de Entrega a Domicilio: Valoramos la comodidad y la satisfacción de nuestros clientes. Por ello, hemos implementado un servicio de entrega a domicilio, donde llevamos los productos frescos directamente desde el productor hasta la puerta de nuestros clientes, garantizando calidad y conveniencia.</li>
+            </ol>
+            <p>Estos son solo algunos ejemplos de lo que ofrecemos en nuestro portafolio. En CROPS nos enorgullece proporcionar soluciones innovadoras y personalizadas que marcan la diferencia en la industria agrícola. Explora nuestro portafolio completo y descubre cómo podemos impulsar tu producción agrícola hacia nuevos horizontes.</p>
+        </article>
+
+
+    </main>
+    <footer class="pie-pagina">
+        <div class="grupo-1">
+            <div class="box">
+                <figure>
+                    <a href="http://127.0.0.1:8000/homecrops/">
+                        <img src="../../../../static/homecrops/images/CROPSlogoBLANCO.png" alt="logo">
+                    </a>
+                </figure>
+            </div>
+            <div class="box">
+                <h2>SOBRE NOSOTROS</h2>
+                <p>¡Bienvenido a CROPS! Somos tu socio en agricultura de precisión. Ofrecemos productos agrícolas de calidad y soluciones innovadoras que optimizan la producción y maximizan la rentabilidad. Únete a nosotros y descubre cómo la combinación de conocimiento y tecnología puede transformar tu negocio agrícola.</p>
+            </div>
+            <div class="box">
+                <h2 class="siguenos">SIGUENOS</h2>
+                    <div class="redes-container">
+                        <ul>
+                            <li><a href="https://www.facebook.com" class="facebook"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="https://www.instagram.com" class="instagram"><i class="fab fa-instagram"></i></a></li>
+                            <li><a href="https://twitter.com" class="twitter"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="https://www.pinterest.com" class="pinterest"><i class="fab fa-pinterest-p"></i></a></li>
+                            <li><a href="https://www.linkedin.com" class="linkedin"><i class="fab fa-linkedin-in"></i></a></li>
+                        </ul>
+                    </div>
+            </div>
+        </div>
+        <div class="grupo-2">
+            <small>&copy; 2023 <b>CROPS</b> - Todos los Derechos Reservados.</small>
+        </div>
+
+    </footer>
+</body>
+</html>
